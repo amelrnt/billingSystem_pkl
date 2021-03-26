@@ -34,7 +34,6 @@ class NewDB extends Migration
             $table->string('no_telp', 45)->nullable();
             $table->string('email', 45)->nullable();
             $table->string('address', 45)->nullable();
-            $table->string('email', 45)->nullable();
             $table->enum('status', array('1', '0'))->default('1');
             $table->timestamps();
             $table->integer('Customer_id')->unsigned();

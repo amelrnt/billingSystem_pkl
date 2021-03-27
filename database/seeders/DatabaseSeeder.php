@@ -58,6 +58,72 @@ class DatabaseSeeder extends Seeder
             'email' => 'shany08@gmail.com'
         ]);
 
+        DB::table('customer')->insert(
+            [
+                'company' => 'PT Maju Bersama',
+                'phone_number' => '03415678066',
+                'address' => 'Sumbersari',
+                'city' => 'Malang',
+                'district' => 'Lowokwaru',
+                'email' => 'example@mail.com',
+                'type' => 'PERDAGANGAN KECIL'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'PT Maju Bersama',
+                'phone_number' => '03415678066',
+                'address' => 'Sumbersari',
+                'city' => 'Malang',
+                'district' => 'Klojen',
+                'email' => 'example@mail.com',
+                'type' =>'PERDAGANGAN KECIL'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'Abernathy-Conroy',
+                'phone_number' => '+1-878-281-2464',
+                'address' => '12715 Bosco Summit',
+                'city' => 'Gleichnerstad',
+                'district' => 'Rue',
+                'email' => 'pbahringer@dicki.org',
+                'type' =>'aut'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'Stark, Emard and Cormier',
+                'phone_number' => '1-561-401-6873',
+                'address' => '1-587-322-7134',
+                'city' => '576 Mckenna Shores Suite 117',
+                'district' => 'South Drewburgh',
+                'email' => 'grant.margret@hane.net',
+                'type' =>'nobis'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'Runte, Cummerata and Reilly',
+                'phone_number' => '1-561-401-6873',
+                'address' => '8930 McKenzie Camp',
+                'city' => 'West Kyler',
+                'district' => 'Ramp',
+                'email' => 'efay@dach.info',
+                'type' =>'odio'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'Dare, Cummings and Mante',
+                'phone_number' => '+1.942.720.7532',
+                'address' => '75203 Immanuel Cove Suite 525',
+                'city' => 'East Tysonshire',
+                'district' => 'Vista',
+                'email' => 'cole.stamm@jenkins.com',
+                'type' =>'maxime'
+            ]
+        );
 
         DB::table('customer_contact_person')->insert(
             [
@@ -123,74 +189,6 @@ class DatabaseSeeder extends Seeder
                 'email' => 'boris.buckridge@kuhlman.com',
                 'address' => '8876 Randi Field Suite 672',
                 'Customer_id' => '6'
-            ]
-        );
-
-        DB::table('customer')->insert(
-            [
-                'company' => 'PT Maju Bersama',
-                'phone_number' => '03415678066',
-                'address' => 'Sumbersari',
-                'city' => 'Malang',
-                'district' => 'Lowokwaru',
-                'email' => 'example@mail.com',
-                'type' => 'PERDAGANGAN KECIL'
-            ]
-        );
-
-        DB::table('customer')->insert(
-            [
-                'company' => 'PT Maju Bersama',
-                'phone_number' => '03415678066',
-                'address' => 'Sumbersari',
-                'city' => 'Malang',
-                'district' => 'Klojen',
-                'email' => 'example@mail.com',
-                'type' =>'PERDAGANGAN KECIL'
-            ]
-        );
-        DB::table('customer')->insert(
-            [
-                'company' => 'Abernathy-Conroy',
-                'phone_number' => '+1-878-281-2464',
-                'address' => '12715 Bosco Summit',
-                'city' => 'Gleichnerstad',
-                'district' => 'Rue',
-                'email' => 'pbahringer@dicki.org',
-                'type' =>'aut'
-            ]
-        );
-        DB::table('customer')->insert(
-            [
-                'company' => 'Stark, Emard and Cormier',
-                'phone_number' => '1-561-401-6873',
-                'address' => '1-587-322-7134',
-                'city' => '576 Mckenna Shores Suite 117',
-                'district' => 'South Drewburgh',
-                'email' => 'grant.margret@hane.net',
-                'type' =>'nobis'
-            ]
-        );
-        DB::table('customer')->insert(
-            [
-                'company' => 'Runte, Cummerata and Reilly',
-                'phone_number' => '1-561-401-6873',
-                'address' => '8930 McKenzie Camp',
-                'city' => 'West Kyler',
-                'district' => 'Ramp',
-                'email' => 'efay@dach.info',
-                'type' =>'odio'
-            ]
-        );
-        DB::table('customer')->insert(
-            [
-                'company' => 'Dare, Cummings and Mante',
-                'phone_number' => '+1.942.720.7532',
-                'address' => '75203 Immanuel Cove Suite 525',
-                'city' => 'East Tysonshire',
-                'district' => 'Vista',
-                'email' => 'cole.stamm@jenkins.com',
-                'type' =>'maxime'
             ]
         );
 

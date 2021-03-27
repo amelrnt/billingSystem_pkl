@@ -61,15 +61,70 @@ class DatabaseSeeder extends Seeder
 
         DB::table('customer_contact_person')->insert(
             [
-                'first_name' => '',
-                'last_name' => '',
-                'no_ktp' => '',
-                'npwp' => '',
-                'email' => '',
-                'address' => '',
-                'Customer_id' => ''
+                'first_name' => 'Panji',
+                'last_name' => 'Rudi',
+                'no_ktp' => '257008837101',
+                'no_telp' => '2570042588371',
+                'email' => 'example@mail.com',
+                'address' => 'Sumbersari',
+                'Customer_id' => '1'
             ]
-            );
+        );
+        DB::table('customer_contact_person')->insert(
+            [
+                'first_name' => 'Emilio',
+                'last_name' => 'Herman',
+                'no_ktp' => '257008837101',
+                'no_telp' => '1138898400456',
+                'email' => 'rokon@yahoo.com',
+                'address' => '2820 Esta Throughway Suite 612',
+                'Customer_id' => '2'
+            ]
+        );
+        DB::table('customer_contact_person')->insert(
+            [
+                'first_name' => 'Jamison',
+                'last_name' => 'Jerde',
+                'no_ktp' => '4222283858348054',
+                'no_telp' => '185833063484',
+                'email' => 'kenna.wyman@yahoo.com',
+                'address' => '12549 Hammes Freeway',
+                'Customer_id' => '3'
+            ]
+        );
+        DB::table('customer_contact_person')->insert(
+            [
+                'first_name' => 'Elda',
+                'last_name' => 'Parker',
+                'no_ktp' => '257008837101',
+                'no_telp' => '2570042588371',
+                'email' => 'ckoepp@hotmail.com',
+                'address' => '760 Deshaun Summit Apt. 896',
+                'Customer_id' => '4'
+            ]
+        );
+        DB::table('customer_contact_person')->insert(
+            [
+                'first_name' => 'Mara',
+                'last_name' => 'Kozey',
+                'no_ktp' => '257008837101',
+                'no_telp' => '2570042588371',
+                'email' => 'xthompson@streich.com',
+                'address' => '62255 Dorothy Tunnel',
+                'Customer_id' => '5'
+            ]
+        );
+        DB::table('customer_contact_person')->insert(
+            [
+                'first_name' => 'Domenic',
+                'last_name' => 'Leannon',
+                'no_ktp' => '1673031178559346',
+                'no_telp' => '2570042588371',
+                'email' => 'boris.buckridge@kuhlman.com',
+                'address' => '8876 Randi Field Suite 672',
+                'Customer_id' => '6'
+            ]
+        );
 
         DB::table('customer')->insert(
             [

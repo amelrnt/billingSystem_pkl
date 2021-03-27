@@ -15,30 +15,61 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
-        foreach (range(0,15) as $i) {
-            # code...
-            DB::table('account_manager')->insert([
-                'first_name' => $faker->firstName(),
-                'last_name' => $faker->lastName(),
-                'phone_number' => $faker->phoneNumber(),
-                'email' => $faker->email()
-            ]);
-        }
+        DB::table('account_manager')->insert([
+            'first_name' => 'Ahmad',
+            'last_name' => 'Rohmi',
+            'phone_number' => '0812368014123',
+            'email' => 'example@mail.com'
+        ]);
+        DB::table('account_manager')->insert([
+            'first_name' => 'Cassandra',
+            'last_name' => 'Mertz',
+            'phone_number' => '1-763-882-4886',
+            'email' => 'dolores08@hotmail.com'
+        ]);
+        DB::table('account_manager')->insert([
+            'first_name' => 'Johathan',
+            'last_name' => 'Bednar',
+            'phone_number' => '(350) 655-3392',
+            'email' => 'werner46@hotmail.com'
+        ]);
+        DB::table('account_manager')->insert([
+            'first_name' => 'Frederic',
+            'last_name' => 'Collier',
+            'phone_number' => '718.774.5755',
+            'email' => 'gino54@hotmail.com'
+        ]);
+        DB::table('account_manager')->insert([
+            'first_name' => 'Orpha',
+            'last_name' => 'Ortiz',
+            'phone_number' => '1-784-845-5810',
+            'email' => 'leonard27@hilpert.com'
+        ]);
+        DB::table('account_manager')->insert([
+            'first_name' => 'Elyssa',
+            'last_name' => 'Treutel',
+            'phone_number' => '+1-252-373-4022',
+            'email' => 'senger.trenton@kling.com'
+        ]);
+        DB::table('account_manager')->insert([
+            'first_name' => 'Alexandrea',
+            'last_name' => 'Glover',
+            'phone_number' => '+1-252-373-4022',
+            'email' => 'shany08@gmail.com'
+        ]);
 
-        for ($i=2; $i < 20; $i++) { 
-            DB::table('customer_contact_person')->insert(
+
+        DB::table('customer_contact_person')->insert(
             [
-                'first_name' => $faker->firstName(),
-                'last_name' => $faker->lastName(),
-                'no_ktp' => $faker->numerify('################'),
-                'npwp' => $faker->numerify('###############'),
-                'email' => $faker->email(),
-                'address' => $faker->streetAddress(),
-                'Customer_id' => $i
+                'first_name' => '',
+                'last_name' => '',
+                'no_ktp' => '',
+                'npwp' => '',
+                'email' => '',
+                'address' => '',
+                'Customer_id' => ''
             ]
             );
-        }
 
         DB::table('customer')->insert(
             [
@@ -52,19 +83,61 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        foreach (range(0,20) as $i) {
-            DB::table('customer')->insert(
-                [
-                    'company' => $faker->company(),
-                    'phone_number' => $faker->phoneNumber(),
-                    'address' => $faker->streetAddress(),
-                    'city' => $faker->city(),
-                    'district' => $faker->streetSuffix(),
-                    'email' => $faker->companyEmail(),
-                    'type' => $faker->word()
-                ]
-            );
-        }
+        DB::table('customer')->insert(
+            [
+                'company' => 'PT Maju Bersama',
+                'phone_number' => '03415678066',
+                'address' => 'Sumbersari',
+                'city' => 'Malang',
+                'district' => 'Klojen',
+                'email' => 'example@mail.com',
+                'type' =>'PERDAGANGAN KECIL'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'Abernathy-Conroy',
+                'phone_number' => '+1-878-281-2464',
+                'address' => '12715 Bosco Summit',
+                'city' => 'Gleichnerstad',
+                'district' => 'Rue',
+                'email' => 'pbahringer@dicki.org',
+                'type' =>'aut'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'Stark, Emard and Cormier',
+                'phone_number' => '1-561-401-6873',
+                'address' => '1-587-322-7134',
+                'city' => '576 Mckenna Shores Suite 117',
+                'district' => 'South Drewburgh',
+                'email' => 'grant.margret@hane.net',
+                'type' =>'nobis'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'Runte, Cummerata and Reilly',
+                'phone_number' => '1-561-401-6873',
+                'address' => '8930 McKenzie Camp',
+                'city' => 'West Kyler',
+                'district' => 'Ramp',
+                'email' => 'efay@dach.info',
+                'type' =>'odio'
+            ]
+        );
+        DB::table('customer')->insert(
+            [
+                'company' => 'Dare, Cummings and Mante',
+                'phone_number' => '+1.942.720.7532',
+                'address' => '75203 Immanuel Cove Suite 525',
+                'city' => 'East Tysonshire',
+                'district' => 'Vista',
+                'email' => 'cole.stamm@jenkins.com',
+                'type' =>'maxime'
+            ]
+        );
 
         DB::table('produk')->insert(
             [
@@ -144,7 +217,7 @@ class DatabaseSeeder extends Seeder
                 'bank_account_name' => '',
                 'Account_Manager_id' => '5',
                 'Produk_idProduk' => '4',
-                'Customer_id' => '9'
+                'Customer_id' => '4'
             ]
         );
     }

@@ -133,7 +133,8 @@
     </aside>
     <!--sidebar end-->
 
-        @if(status != null)
+        @isset($status)
+        @if($status != null)
         <div class="alert alert-success fade in">
           <button data-dismiss="alert" class="close close-sm" type="button">
           <i class="icon-remove"></i>
@@ -141,6 +142,7 @@
           <strong>Email Telah Terkirim!</strong>
         </div>
         @endif
+        @endisset
 
     <!--main content start-->
     <section id="main-content">

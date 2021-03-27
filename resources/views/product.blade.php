@@ -147,14 +147,15 @@
         </div>
         <!-- page start-->
 
-        @if(status == input)
+        @isset($status)
+        @if($status == input)
         <div class="alert alert-success fade in">
           <button data-dismiss="alert" class="close close-sm" type="button">
           <i class="icon-remove"></i>
           </button>
           <strong>Input Data Baru Berhasil!</strong>
         </div>
-        @elseif (status == edit)
+        @elseif ($status == edit)
         <div class="alert alert-warning fade in">
           <button data-dismiss="alert" class="close close-sm" type="button">
           <i class="icon-remove"></i>
@@ -162,6 +163,7 @@
           <strong>Edit Data Baru Berhasil!</strong>
         </div>
         @endif
+        @endisset
        
         <a type="button" class="btn btn-primary" href="{{url('/formProduct')}}">Add new Data</a>
         <br><br>

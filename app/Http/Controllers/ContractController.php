@@ -56,9 +56,9 @@ class ContractController extends BaseController
     public function allContract()
     {
         $contract = DB::table('contract AS c')
-        ->join('produk AS p', 'c.produk_idProduk', '=', 'p.id')
-        ->join('account_manager AS a', 'c.account_manager_id', '=', 'a.id')
-        ->join('customer AS u', 'c.customer_id', '=', 'u.id')
+        ->join('produk AS p', 'c.Produk_idProduk', '=', 'p.id')
+        ->join('account_manager AS a', 'c.Account_manager_id', '=', 'a.id')
+        ->join('customer AS u', 'c.Customer_id', '=', 'u.id')
         //->select('c.no_surat', 'c.start_date', 'c.end_date', 'c.payment_status' , 'p.name AS productname', 'u.company', 'a.first_name',' a.last_name')
         ->get();
 
@@ -68,9 +68,9 @@ class ContractController extends BaseController
     public function report()
     {
         $contract = DB::table('contract AS c')
-        ->join('produk AS p', 'c.produk_idProduk', '=', 'p.id')
-        ->join('account_manager AS a', 'c.account_manager_id', '=', 'a.id')
-        ->join('customer AS u', 'c.customer_id', '=', 'u.id')
+        ->join('produk AS p', 'c.Produk_idProduk', '=', 'p.id')
+        ->join('account_manager AS a', 'c.Account_manager_id', '=', 'a.id')
+        ->join('customer AS u', 'c.Customer_id', '=', 'u.id')
         //->select('c.no_surat', 'c.start_date', 'c.end_date', 'c.payment_status' , 'p.name AS productname', 'u.company', 'a.first_name',' a.last_name')
         ->get();
 
@@ -80,9 +80,9 @@ class ContractController extends BaseController
     public function paymentInfo($id)
     {
         $contr =  DB::table('contract AS c')
-        ->join('produk AS p', 'c.produk_idProduk','=','p.id')
-        ->join('account_manager AS a', 'c.account_manager_id', '=', 'a.id')
-        ->join('customer AS u', 'c.customer_id', '=', 'u.id')
+        ->join('produk AS p', 'c.Produk_idProduk','=','p.id')
+        ->join('account_manager AS a', 'c.Account_manager_id', '=', 'a.id')
+        ->join('customer AS u', 'c.Customer_id', '=', 'u.id')
         ->join('customer_contact_person AS cp', 'u.id', '=', 'cp.id')
         ->select('c.id','c.no_surat', 'c.start_date', 'c.end_date', 'c.payment_status', 'p.name AS product',  'p.price', 'u.company', DB::raw('concat( a.first_name," ",a.last_name) AS am'), DB::raw('concat( cp.first_name," ",cp.last_name) AS cp'))
         ->where('c.id','=',$id)
@@ -108,9 +108,9 @@ class ContractController extends BaseController
     public function mailManual()
     {
         $contract = DB::table('contract AS c')
-        ->join('produk AS p', 'c.produk_idProduk', '=', 'p.id')
-        ->join('account_manager AS a', 'c.account_manager_id', '=', 'a.id')
-        ->join('customer AS u', 'c.customer_id', '=', 'u.id')
+        ->join('produk AS p', 'c.Produk_idProduk', '=', 'p.id')
+        ->join('account_manager AS a', 'c.Account_manager_id', '=', 'a.id')
+        ->join('customer AS u', 'c.Customer_id', '=', 'u.id')
         //->select('c.no_surat', 'c.start_date', 'c.end_date', 'c.payment_status' , 'p.name AS productname', 'u.company', 'a.first_name',' a.last_name')
         ->get();
 
@@ -122,9 +122,9 @@ class ContractController extends BaseController
         $id = 1;
 
         $contract = DB::table('contract AS c')
-        ->join('produk AS p', "c.produk_idProduk", '=', 'p.id')
-        ->join('account_manager AS a', 'c.account_manager_id', '=', 'a.id')
-        ->join('customer AS u', 'c.customer_id', '=', 'u.id')
+        ->join('produk AS p', "c.Produk_idProduk", '=', 'p.id')
+        ->join('account_manager AS a', 'c.Account_manager_id', '=', 'a.id')
+        ->join('customer AS u', 'c.Customer_id', '=', 'u.id')
         ->join('customer_contact_person AS cp', 'cp.Customer_id', '=', 'u.id')
         ->select('c.no_surat', 'c.start_date', 'c.end_date', 'p.name AS productname', 'p.price', 
         'u.company', DB::raw('concat(u.city, " ", u.district) AS address'), 'u.email AS emailcomp',
